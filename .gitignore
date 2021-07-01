@@ -1,0 +1,6 @@
+node_modules
+notes-api-webserver.pem 
+readme.txt
+databasetest.js
+.env
+.prod.env
