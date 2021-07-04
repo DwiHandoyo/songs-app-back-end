@@ -2,7 +2,7 @@ const { Pool } = require('pg');
 const { nanoid } = require('nanoid');
 const InvariantError = require('../../exceptions/InvariantError');
 const NotFoundError = require('../../exceptions/NotFoundError');
-const { mapDBToModel, modelToResponse } = require('../../utils');
+const { mapDBToModel, modelToResponse } = require('../../utils/songs');
 
 class SongsService {
   constructor() {
@@ -16,7 +16,7 @@ class SongsService {
     genre,
     duration,
   }) {
-    const id = 'song'+ nanoid(16);
+    const id = 'song-'+ nanoid(16);
     const insertedAt = new Date().toISOString();
 
     const query = {
